@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class FeatureSku extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
-    protected $table = [
-        'order_id',
+    protected $fillable = [
         'sku_id',
-        'product',
-        'quantity',
-        'unitary_price',
+        'feature_id',
+        'value',
     ];
 
 }

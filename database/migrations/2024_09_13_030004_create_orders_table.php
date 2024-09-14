@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string('session_id')->nullable();
             $table->decimal('total', 10, 2)->nullable();
-            $table->integer('status'); // ENUM
+            $table->integer('status'); //ENUM
             $table->timestamps();
             $table->softDeletes();
         });
